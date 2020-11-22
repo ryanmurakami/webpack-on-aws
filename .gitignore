@@ -9,6 +9,7 @@ requirements.txt
 **/*.psd
 public/images/*-original.jpg
 public/images/*-original.png
+package.zip
 
 # Serverless directories
 .serverless
