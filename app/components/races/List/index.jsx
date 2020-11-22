@@ -1,6 +1,5 @@
 import React from 'react'
 import ListItem from '../ListItem/index.jsx'
-import styles from './index.less'
 
 class List extends React.Component {
   render () {
@@ -15,7 +14,7 @@ class List extends React.Component {
     })
 
     return (
-      <div className={`${styles.list} ${this.props.className || ''}`}>
+      <div className={`${this.props.className || ''}`}>
         {races.map((race, index) => (
           <ListItem
             key={index}

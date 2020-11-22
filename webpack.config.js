@@ -5,13 +5,17 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: 'eval',
 
   entry: {
     application: './app/index.jsx'
   },
 
   mode: 'production',
+
+  cache: {
+    type: 'filesystem'
+  },
 
   module: {
     rules: [
@@ -37,7 +41,7 @@ module.exports = {
 
   optimization: {
     minimize: true,
-    minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
+    minimizer: [new TerserPlugin(), new CssMinimizerPlugin()]
   },
 
   output: {
@@ -51,7 +55,7 @@ module.exports = {
         NODE_ENV: JSON.stringify('production')
       }
     }),
-    new MiniCssExtractPlugin({ filename: 'stylesheet.css' }),
-    new webpack.optimize.ModuleConcatenationPlugin()
-  ]
+    new MiniCssExtractPlugin({ filename: 'stylesheet.css' })
+  ],
+  stats: 'minimal'
 }
