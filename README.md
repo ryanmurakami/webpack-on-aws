@@ -1,6 +1,6 @@
 # Examples running webpack v5 on AWS
 
-[![Surfing the Web with Lambda Video](https://img.youtube.com/vi/IG__c0FyLh4/0.jpg)](https://www.youtube.com/watch?v=IG__c0FyLh4)
+[![Running webpack on AWS Video](https://img.youtube.com/vi/IG__c0FyLh4/0.jpg)](https://www.youtube.com/watch?v=IG__c0FyLh4)
 
 ## 1. Run on AWS CodeBuild
 
